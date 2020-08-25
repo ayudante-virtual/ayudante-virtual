@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  botpress:
+    build: .
+    volumes:
+      - botpress-data:/botpress/data
+      - ./data/:/botpress/out
+    ports:
+      - "3000:3000"
+
+volumes:
+  botpress-data:

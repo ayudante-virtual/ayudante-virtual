@@ -1,21 +1,16 @@
 # Ayudante virtual
 
 ### Prerequisitos
- - wget
- - unzip
-
-### Instalación
-
-    ./install.sh
+ - [Docker](https://www.docker.com/)
 
 ### Iniciar
 
-    src/bp
+    $ docker-compose up -d
 
-### Obtener y pushear cambios
+Se inicia botpress en [localhost:3000](http://localhost:3000).
 
-    botpress pull --url <url> --token <auth_token> --targetDir <remote_data_path>
-    
-    botpress push --url <url> --token <auth_token> --sourceDir <local_data_path>
+### Obtener cambios
+
+    $ docker-compose exec botpress ./bp pull --token <auth_token> --targetDir out
 
 Ver más en [botpress.com/docs/advanced/versions](https://botpress.com/docs/advanced/versions).
