@@ -1,5 +1,25 @@
+dist: xenial
+os: linux
+language: node_js
+node_js:
+  - 10
+
 services:
   - docker
 
 before_install:
   - docker build -t ayudante-virtual .
+
+script:
+  - echo "We are missing some tests!"
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
+
+env:
+  global:
+    - secure: dKASrDc361F2PwcUwlegVBwMtZgCWdxOQ4XciCblELMcCKRZ9Q7FmfqjBybbao1WrGFoUaBwz1AjNW4MEO3J9+z3KTGtabD+mLfIYgWVuhxk+7ae5bPCn8l+sw9/W4Cru6omEBDHx26kI0ntxl1C0hmreKeAo0dcL98lp1eGoAIOalYHxyK5s1olV/OTj3hmglXeAyRouKyrdohk3baFmAFPYiTuhD5DyjXCOknTlkR1vbxOGddEtARzkk1RqcQ7NUG30cm6OqELPgB6zzogaFpYNkL6SEoyuPoskkHs3GmB01kJTgrnCDJL0MGczUOhPoKbSe8qEnXLGnROfO9g8TkeDEOC0QgjnESEef3j9va5Wx+AWQ8SE1JA2ytfJjcplCuBlFr/0JLdHOqzQslY/oiMLZx+h2zEG15ETfo7zWAoBKvvV2zGx2aaxWTXTAet5LocNfAGzVcymiEP4BZPE6lAWCXRvslDz7jGk9odkBsiqCOXGzs+F7AhytvZks1jDgdVsb4buxEYNdG7eFcyzMx5Q1FjN8Q0PzwBjGmjskPncWwGpli6btjEDT3ptcaL1knB/wR81LZ2BRLLPl5/5uM3tLYHkTG5oFaMLLNO74BJUsfWWl6a4GcOMZ/PFbynOSMDVYPDBYiX3+hmMZ71dQ7ItK3OjjpKHzphWuYAV78=
+    - secure: cy7XcEq/Jb0yMRPOHBlzZf6vtQTGi4JkkqUtw2zfO4ROW68UUla+KexgZbJDO+uLaPmtS5qefovskDqdOKYtShM0Flm75XHAqPpFCxv27ofC4t7aMJT2Kn4xFiFCvugwmBOMlzGZ4xuERsoJ6ePUWPIvCLACOpOtpAnQ5qaiyvXutRqBbbwBBvu4KT4xSH7KKhYd5VLL8pn73PpOmEYgPoaK3L/rpE/6klEoQIBgK2GXWc5Ggd5hm7XZTdVNO9YYgqdEH/212r29WFtJgrY9DmXTcTVQ/0hklSQE9VAPqHt9UB74RznxIEXdoaiPlfKJVaSnoQ+isgRWj8FvBtzhuAcueZzFZ3u+ltVynvo1CynygSVru/I06Q8Fg6Na03sqsXVkDqYgyRX6b/+eMfngFwQaPGcLOjPEyBVzfEN03Gxyrxm9RcOs+vME3Zp57kyHO2ZdDcdx6F50IqVJgMPS+auwZyqnWrNHlphf9OWEPYHOSI0utvW0WYLCphy+JX0k8ZVHejAS37WQpTFIOqUWYuGXRuhugGj0MB3UQHH5GsNp2BTZT2unsF/I3rOdhrUJ1OBDLcPLKiHWWlAe8DhbvF5C6eSVjXMZCVO5PzawHLf77DKT6K2VeDIxNs5apCfdzdJPzouQD5LOyYOI1LrUK/KWuj68IMNRJfUHY2Ytt34=
