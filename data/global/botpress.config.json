@@ -63,6 +63,10 @@
       "enabled": false
     },
     {
+      "location": "MODULES_ROOT/channel-slack-av",
+      "enabled": true
+    },
+    {
       "location": "MODULES_ROOT/channel-slack",
       "enabled": false
     },
@@ -230,6 +234,6 @@
     "remotes": []
   },
   "experimental": false,
-  "version": "12.10.5",
-  "appSecret": "lPQRbLaiTcCt-SghJ81PW0ysxLFK8s_Rvm1Bz3yI"
+  "version": "12.10.6",
+  "appSecret": "WuLDEoqfcrKBAkr8ryDg1380iMWiQGduikfMiitc"
 }

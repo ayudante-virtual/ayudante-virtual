@@ -1,4 +1,4 @@
-//CHECKSUM:d9f5edd1114742d2a4bdbd53ce6de3ac2e0f5672d727ff09a9b65e56f145152b
+//CHECKSUM:2de8e7b1cbcd85b4218082eae463538cd681e79c3079bd974a506cdbe1000851
 'use strict'
 const _ = require('lodash')
 const INTENT_PREFIX = 'intent:'
@@ -14,7 +14,7 @@ const INTENT_PREFIX = 'intent:'
 const validateChoice = async data => {
   let choice = undefined
   const config = await bp.config.getModuleConfigForBot('basic-skills', event.botId)
-  const nb = _.get(event.preview.match(/^[#).!]?([\d]{1,2})[#).!]?$/), '[1]')
+  const nb = _.get(event.preview && event.preview.match(/^[#).!]?([\d]{1,2})[#).!]?$/), '[1]')
 
   if (config.matchNumbers && nb) {
     const index = parseInt(nb) - 1
@@ -32,13 +32,13 @@ const validateChoice = async data => {
   }
 
   if (!choice) {
-    const preview = (event.preview || '').toLowerCase()
-    const userText = ((event.payload && event.payload.text) || '').toLowerCase()
-    const choiceValue = ((event.payload && event.payload.payload) || '').toLowerCase()
-
+    const lcstr = value => (typeof value === 'string' ? value.toLowerCase() : '')
+    const preview = lcstr(event.preview)
+    const userText = lcstr(event.payload && event.payload.text)
+    const choiceValue = lcstr(event.payload && event.payload.payload)
     choice = _.findKey(data.keywords, keywords =>
       _.some(keywords || [], k => {
-        const keyword = (k || '').toLowerCase()
+        const keyword = lcstr(k)
         return preview.includes(keyword) || userText.includes(keyword) || choiceValue.includes(keyword)
       })
     )

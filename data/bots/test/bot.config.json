@@ -6,7 +6,7 @@
   "$schema": "../../bot.config.schema.json",
   "description": "A bot to help you get started",
   "active": true,
-  "version": "12.10.5",
+  "version": "12.10.6",
   "author": "Botpress, Inc.",
   "license": "AGPL-3.0",
   "imports": {
@@ -38,7 +38,7 @@
   "pipeline_status": {
     "current_stage": {
       "id": "prod",
-      "promoted_on": "2020-08-25T04:50:50.138Z",
+      "promoted_on": "2020-08-28T01:18:32.810Z",
       "promoted_by": "admin"
     }
   }

@@ -1,0 +1,23 @@
+{
+  "$schema": "../../assets/modules/channel-slack-av/config.schema.json",
+  "enabled": false,
+  "botId": "your_bot_id",
+  "signingSecret": "signin_secret",
+  "eventsUrl": "/slack/events",
+  "chatUserAuthDuration": "24h",
+  "botToken": "your_bot_token",
+  "clientId": "client_id",
+  "clientSecret": "client_secret",
+  "stateSecret": "state_secret",
+  "scopes": [
+    "channels:history",
+    "chat:write",
+    "im:history",
+    "users:read"
+  ],
+  "redirectUrl": "/slack/redirect",
+  "installUrl": "/slack/installApp",
+  "installUrlEndpoint": "/slack/installUrl",
+  "successRedirectUrl": null,
+  "failureRedirectUrl": null
+}

@@ -9,8 +9,10 @@
 
 Se inicia botpress en [localhost:3000](http://localhost:3000).
 
-### Obtener cambios
+### Permisos de Slack
 
-    $ docker-compose exec botpress ./bp pull --token <auth_token> --targetDir out
+El bot requiere de los siguientes permisos de slack para funcionar correctamente:
 
-Ver más en [botpress.com/docs/advanced/versions](https://botpress.com/docs/advanced/versions).
+ - `users:read`: permite saludar a los alumnos.
+ - `im:history`: permite leer las consultas enviadas al ayudante.
+ - `chat:write`: permite responder consultas y tener una conversación con el bot.

@@ -4,7 +4,8 @@ services:
     build: .
     volumes:
       - botpress-data:/botpress/data
-      - ./data/:/botpress/out
+      - ./data/bots:/botpress/data/bots
+      - ./data/global:/botpress/data/global
     ports:
       - "3000:3000"
 
