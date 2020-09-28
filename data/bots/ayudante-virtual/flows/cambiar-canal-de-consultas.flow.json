@@ -1,0 +1,131 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "e096d62122",
+      "name": "entry",
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"alreadyExtracted\",\"value\":\"null\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"extracted\",\"value\":\"null\"}"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "extraer_canal_de_consultas"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "skill-d44aa9",
+      "type": "skill-call",
+      "skill": "Slot",
+      "name": "extraer_canal_de_consultas",
+      "flow": "skills/Slot-d44aa9.flow.json",
+      "next": [
+        {
+          "caption": "On extracted",
+          "condition": "temp.extracted == \"true\"",
+          "node": "cambiar_canal_de_consultas"
+        },
+        {
+          "caption": "On not found",
+          "condition": "temp.notExtracted == \"true\"",
+          "node": "extraccion_imposible"
+        },
+        {
+          "caption": "On already extracted",
+          "condition": "temp.alreadyExtracted == \"true\"",
+          "node": "cambiar_canal_de_consultas"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "cde55ba491",
+      "name": "cambiar_canal_de_consultas",
+      "next": [
+        {
+          "condition": "temp.canal_no_encontrado == true",
+          "node": "canal_no_encontrado"
+        },
+        {
+          "condition": "true",
+          "node": "canal_configurado_correctamente"
+        }
+      ],
+      "onEnter": [
+        "ayudante-virtual/cambiarCanalDeConsultas {}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "8643b4ed0a",
+      "name": "extraccion_imposible",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-v6p-bh",
+        "say #!builtin_text-qSYOVT",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"notExtracted\",\"value\":\"null\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "8d84b263de",
+      "name": "canal_no_encontrado",
+      "next": [
+        {
+          "condition": "true",
+          "node": "fin"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-j-mUxa"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "0dc6b77543",
+      "name": "fin",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "ayudante-virtual/setVariable {\"tipo\":\"session\",\"nombre\":\"slots\",\"expresion\":\"null\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "bf98a683aa",
+      "name": "canal_configurado_correctamente",
+      "next": [
+        {
+          "condition": "true",
+          "node": "fin"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-AmugZQ"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

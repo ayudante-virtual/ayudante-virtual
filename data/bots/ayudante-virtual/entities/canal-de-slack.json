@@ -1,0 +1,10 @@
+{
+  "id": "canal-de-slack",
+  "name": "canal de slack",
+  "type": "pattern",
+  "occurrences": [],
+  "sensitive": false,
+  "fuzzy": 0.8,
+  "examples": [],
+  "pattern": "#[C|G][a-z0-9]{8,12}"
+}

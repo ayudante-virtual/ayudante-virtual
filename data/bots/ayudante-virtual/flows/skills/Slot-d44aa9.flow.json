@@ -1,0 +1,112 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "check-if-extracted",
+  "skillData": {
+    "retryAttempts": 2,
+    "contentElement": "builtin_text-cfdNnC",
+    "notFoundElement": "builtin_text-v6p-bh",
+    "turnExpiry": 1,
+    "intent": "cambiar-canal-de-consulta",
+    "slotName": "canal_de_consulta",
+    "entities": [
+      "canal de slack"
+    ]
+  },
+  "nodes": [
+    {
+      "name": "slot-extract",
+      "onEnter": [
+        "say #!builtin_text-cfdNnC {}"
+      ],
+      "onReceive": [
+        "basic-skills/slot_fill {\"slotName\":\"canal_de_consulta\",\"entities\":\"canal de slack\", \"turnExpiry\":1}"
+      ],
+      "next": [
+        {
+          "condition": "session.slots['canal_de_consulta'] && (temp.valid === undefined || temp.valid == \"true\")",
+          "node": "extracted"
+        },
+        {
+          "condition": "true",
+          "node": "not-extracted"
+        }
+      ],
+      "id": "358436"
+    },
+    {
+      "name": "extracted",
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"extracted\",\"value\":\"true\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "601772"
+    },
+    {
+      "name": "not-extracted",
+      "onEnter": [
+        "basic-skills/slot_not_found {\"retryAttempts\":\"2\"}",
+        "say #!builtin_text-v6p-bh {}"
+      ],
+      "onReceive": [
+        "basic-skills/slot_fill {\"slotName\":\"canal_de_consulta\",\"entities\":\"canal de slack\", \"turnExpiry\":1}"
+      ],
+      "next": [
+        {
+          "condition": "session.slots['canal_de_consulta'] && (temp.valid === undefined || temp.valid == \"true\")",
+          "node": "extracted"
+        },
+        {
+          "condition": "temp.notExtracted == \"true\"",
+          "node": "#"
+        },
+        {
+          "condition": "session.slots.notFound > 0",
+          "node": "not-extracted"
+        },
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "050895"
+    },
+    {
+      "name": "check-if-extracted",
+      "onEnter": [
+        "basic-skills/slot_update_contexts {\"intentName\":\"cambiar-canal-de-consulta\"}"
+      ],
+      "next": [
+        {
+          "condition": "session.slots['canal_de_consulta'] !== undefined",
+          "node": "already-extracted"
+        },
+        {
+          "condition": "true",
+          "node": "slot-extract"
+        }
+      ],
+      "id": "246114"
+    },
+    {
+      "name": "already-extracted",
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"alreadyExtracted\",\"value\":\"true\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "017887"
+    }
+  ]
+}

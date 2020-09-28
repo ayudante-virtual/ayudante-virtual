@@ -152,5 +152,71 @@
     "createdBy": "admin",
     "createdOn": "2020-09-28T04:32:54.019Z",
     "modifiedOn": "2020-09-28T08:42:00.602Z"
+  },
+  {
+    "id": "builtin_text-cfdNnC",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Por favor escribí el id del canal al que se enviarán las consultas (ej: #CV8R3GK5A)"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T15:22:06.763Z",
+    "modifiedOn": "2020-09-28T15:40:27.137Z"
+  },
+  {
+    "id": "builtin_text-v6p-bh",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Lo siento, no entendí lo que querías decir."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T15:35:13.923Z",
+    "modifiedOn": "2020-09-28T15:54:41.044Z"
+  },
+  {
+    "id": "builtin_text-AmugZQ",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Gracias! El nuevo canal de consultas fue configurado correctamente."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T15:36:38.423Z",
+    "modifiedOn": "2020-09-28T16:52:31.956Z"
+  },
+  {
+    "id": "builtin_text-qSYOVT",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Podés intentarlo de nuevo más tarde, saludos! 👋"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T15:38:36.425Z",
+    "modifiedOn": "2020-09-28T15:38:36.425Z"
+  },
+  {
+    "id": "builtin_text-j-mUxa",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Lo siento, el canal proporcionado no existe o no tengo acceso para enviar mensajes en él. Recorda que debo ser *miembro de dicho canal* para poder enviar las consultas allí."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T16:45:46.991Z",
+    "modifiedOn": "2020-09-28T16:45:46.991Z"
+  },
+  {
+    "id": "builtin_text-8PlTHz",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Lo siento, los ayudantes aún no me configuraron correctamente. Por favor *enviá tu consulta nuevamete* más tarde."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T17:14:31.644Z",
+    "modifiedOn": "2020-09-28T17:14:31.644Z"
   }
 ]

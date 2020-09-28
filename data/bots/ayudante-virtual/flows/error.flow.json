@@ -7,7 +7,8 @@
       "id": "3rr0r",
       "name": "entry",
       "onEnter": [
-        "say #!builtin_text-idOlxF"
+        "say #!builtin_text-idOlxF",
+        "ayudante-virtual/borrarVariablesTemporales {}"
       ],
       "onReceive": null,
       "next": [

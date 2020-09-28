@@ -45,7 +45,7 @@
         {
           "caption": "User picked [true]",
           "condition": "temp['skill-choice-ret-5nber4j58d'] == \"true\"",
-          "node": "enviar_consulta"
+          "node": "buscar_canal"
         },
         {
           "caption": "User picked [false]",
@@ -86,7 +86,7 @@
         }
       ],
       "onEnter": [
-        "ayudante-virtual/enviarMensaje {\"canal\":\"CV8R3GK5G\",\"mensaje\":\"<@{{event.payload.body.user.id}}> tiene una consulta: {{{temp.consulta}}}\"}",
+        "ayudante-virtual/enviarMensaje {\"canal\":\"{{temp.canal_de_consultas}}\",\"mensaje\":\"<@{{event.payload.body.user.id}}> tiene una consulta: {{{temp.consulta}}}\"}",
         "say #!builtin_text-a2M62m",
         "say #!builtin_text--DNJlI"
       ],
@@ -104,6 +104,40 @@
       ],
       "onEnter": [
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"skill-choice-ret-5nber4j58d\",\"value\":\"null\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "ca5ab41740",
+      "name": "canal_no_configurado",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-8PlTHz"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "946365c514",
+      "name": "buscar_canal",
+      "next": [
+        {
+          "condition": "temp.canal_de_consultas === false",
+          "node": "canal_no_configurado"
+        },
+        {
+          "condition": "true",
+          "node": "enviar_consulta"
+        }
+      ],
+      "onEnter": [
+        "ayudante-virtual/getCanalDeConsultas {}"
       ],
       "onReceive": null,
       "type": "standard"

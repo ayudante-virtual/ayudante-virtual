@@ -8,6 +8,22 @@
       "name": "entry",
       "next": [
         {
+          "condition": "event.nlu.intent.name === 'cambiar-canal-de-consulta'",
+          "node": "cambiar-canal-de-consultas.flow.json"
+        },
+        {
+          "condition": "true",
+          "node": "bienvenida"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null
+    },
+    {
+      "id": "7aaa05ed72",
+      "name": "bienvenida",
+      "next": [
+        {
           "condition": "true",
           "node": "consultar.flow.json"
         }
@@ -15,7 +31,8 @@
       "onEnter": [
         "say #!builtin_text-qFYUYH"
       ],
-      "onReceive": null
+      "onReceive": null,
+      "type": "standard"
     }
   ]
 }

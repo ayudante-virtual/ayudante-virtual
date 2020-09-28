@@ -6,7 +6,30 @@
         "x": -260,
         "y": 5
       }
+    },
+    {
+      "id": "7aaa05ed72",
+      "position": {
+        "x": 140,
+        "y": 80
+      }
     }
   ],
-  "links": []
+  "links": [
+    {
+      "source": "df052970ef",
+      "sourcePort": "out1",
+      "target": "7aaa05ed72",
+      "points": [
+        {
+          "x": -54,
+          "y": 77
+        },
+        {
+          "x": 240,
+          "y": 73
+        }
+      ]
+    }
+  ]
 }

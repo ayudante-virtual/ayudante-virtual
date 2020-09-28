@@ -1,0 +1,25 @@
+[
+  {
+    "id": "dropdown-kNjt7o",
+    "formData": {
+      "buttonText$es": "button",
+      "width$es": 200,
+      "displayInKeyboard$es": true,
+      "typing$es": true,
+      "message$es": "Some dropdown",
+      "options$es": [
+        {
+          "label": "l1",
+          "value": "v1"
+        },
+        {
+          "label": "l2",
+          "value": "v2"
+        }
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T15:29:02.564Z",
+    "modifiedOn": "2020-09-28T15:29:02.564Z"
+  }
+]

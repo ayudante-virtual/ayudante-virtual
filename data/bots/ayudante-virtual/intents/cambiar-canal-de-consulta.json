@@ -1,0 +1,24 @@
+{
+  "name": "cambiar-canal-de-consulta",
+  "utterances": {
+    "es": [
+      "set canal de consultas [#CV8R3GK5G](canal_de_consulta)",
+      "cambiar canal de consultas [#CV8R3GK5G](canal_de_consulta)",
+      "setear canal de consultas [#CV8R3GK5G](canal_de_consulta)",
+      "[G01157ZLB8B](canal_de_consulta)"
+    ]
+  },
+  "slots": [
+    {
+      "id": "UJOfkvjweCd36BQc1VeKB",
+      "name": "canal_de_consulta",
+      "entities": [
+        "canal de slack"
+      ],
+      "color": 1
+    }
+  ],
+  "contexts": [
+    "global"
+  ]
+}
