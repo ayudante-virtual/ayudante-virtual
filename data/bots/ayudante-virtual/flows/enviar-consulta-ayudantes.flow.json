@@ -1,0 +1,97 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "e273830144",
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_text-X6yWEX"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "enviar_consulta_edicion"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "011b3cd0f3",
+      "name": "enviar_consulta_edicion",
+      "next": [
+        {
+          "condition": "true",
+          "node": "confirmar_consulta"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-HMx76K",
+        "say #!builtin_text-8SYQmD"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "c07c33a2e5",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "confirmar_consulta",
+      "flow": "skills/choice-98a4f2.flow.json",
+      "next": [
+        {
+          "caption": "User picked [true]",
+          "condition": "temp['skill-choice-ret-5nber4j58d'] == \"true\"",
+          "node": "enviar_consulta"
+        },
+        {
+          "caption": "User picked [false]",
+          "condition": "temp['skill-choice-ret-5nber4j58d'] == \"false\"",
+          "node": "##"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "editar_consulta"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "fec57c2a0f",
+      "name": "editar_consulta",
+      "next": [
+        {
+          "condition": "true",
+          "node": "enviar_consulta_edicion"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"consulta\",\"value\":\"{{event.preview}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "34ac99c599",
+      "name": "enviar_consulta",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "ayudante-virtual/enviarMensaje {\"canal\":\"CV8R3GK5G\",\"mensaje\":\"<@{{event.payload.body.user.id}}> tiene una consulta: {{{temp.consulta}}}\"}",
+        "say #!builtin_text-a2M62m",
+        "say #!builtin_text--DNJlI"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "5nber4j58d",
+    "contentId": "builtin_single-choice-mRIa_1",
+    "invalidContentId": "",
+    "keywords": {
+      "true": [
+        "true",
+        "Sí"
+      ],
+      "false": [
+        "false",
+        "Cancelar"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 0,
+      "repeatChoicesOnInvalid": false
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-mRIa_1 {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "548420"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"5nber4j58d\",\"contentId\":\"builtin_single-choice-mRIa_1\",\"invalidContentId\":\"\",\"keywords\":{\"true\":[\"true\",\"Sí\"],\"false\":[\"false\",\"Cancelar\"]},\"config\":{\"nbMaxRetries\":0,\"repeatChoicesOnInvalid\":false}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-5nber4j58d'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "triggers": [
+        {
+          "conditions": [
+            {
+              "id": "always"
+            }
+          ]
+        }
+      ],
+      "onEnter": [],
+      "id": "731500"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"5nber4j58d\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-5nber4j58d']) > Number(0)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "853699"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "574632"
+    }
+  ]
+}

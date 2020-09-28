@@ -1,0 +1,30 @@
+{
+  "name": "consultar",
+  "utterances": {
+    "es": [
+      "Tengo una consulta [polimorfismo](consulta)",
+      "Cómo puedo [programar orientado a objetos](consulta)?",
+      "Qué es [una clase](consulta)?",
+      "Qué significa [herencia](consulta)?",
+      "Cuándo [es el parcial](consulta)?",
+      "Cuál [es el patrón state](consulta)?",
+      "Cómo [apruebo algo3](consulta)?",
+      "Por qué [es preferible la composición sobre la herencia](consulta)?",
+      "Está bien [implementar varias interfaces](consulta)?",
+      "Existe [la herencia múltiple](consulta)?"
+    ]
+  },
+  "slots": [
+    {
+      "id": "ninl8tPlZiKX3Tk4RrjW1",
+      "name": "consulta",
+      "entities": [
+        "any"
+      ],
+      "color": 1
+    }
+  ],
+  "contexts": [
+    "global"
+  ]
+}

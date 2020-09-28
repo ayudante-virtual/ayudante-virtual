@@ -1,0 +1,4 @@
+{
+  "$schema": "../../assets/modules/ndu/config.schema.json",
+  "minimumConfidence": 0.1
+}

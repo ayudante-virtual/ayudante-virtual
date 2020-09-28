@@ -1,0 +1,173 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "df2603feba",
+      "name": "entry",
+      "onEnter": [],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "event.nlu.slots && event.nlu.slots.consulta && event.nlu.slots.consulta.value",
+          "node": "buscar_respuestas"
+        },
+        {
+          "condition": "true",
+          "node": "saludar"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "86e598a988",
+      "name": "saludar",
+      "next": [
+        {
+          "condition": "event.nlu.intent.name === 'saludar'",
+          "node": "transicion"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'ayuda'",
+          "node": "transicion"
+        },
+        {
+          "condition": "true",
+          "node": "buscar_respuestas"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-qAsF9R"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "620acec12b",
+      "name": "buscar_respuestas",
+      "next": [
+        {
+          "condition": "temp.respuestas == \"\"",
+          "node": "sin_respuestas"
+        },
+        {
+          "condition": "true",
+          "node": "mostrar_respuestas"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"consulta\",\"value\":\"{{event.preview}}\"}",
+        "ayudante-virtual/setVariable {\"tipo\":\"temp\",\"nombre\":\"busqueda\",\"expresion\":\"'{{event.nlu.slots.consulta.value}}' ||  '{{event.preview}}'\"}",
+        "ayudante-virtual/obtenerRespuestas {\"busqueda\":\"{{temp.busqueda}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "8a24ecf70a",
+      "name": "transicion",
+      "next": [
+        {
+          "condition": "true",
+          "node": "saludar"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "e20d1ab0e7",
+      "name": "sin_respuestas",
+      "next": [
+        {
+          "condition": "true",
+          "node": "realizar_otra_consulta"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-aBnApp"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "269a7e4992",
+      "name": "mostrar_respuestas",
+      "next": [
+        {
+          "condition": "true",
+          "node": "realizar_otra_consulta"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-g9iSlK"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "91462939d0",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "realizar_otra_consulta",
+      "flow": "skills/choice-78eb4e.flow.json",
+      "next": [
+        {
+          "caption": "User picked [true]",
+          "condition": "temp['skill-choice-ret-dcf4it91rp'] == \"true\"",
+          "node": "saludar"
+        },
+        {
+          "caption": "User picked [false]",
+          "condition": "temp['skill-choice-ret-dcf4it91rp'] == \"false\"",
+          "node": "despedirse"
+        },
+        {
+          "caption": "User picked [enviar_...]",
+          "condition": "temp['skill-choice-ret-dcf4it91rp'] == \"enviar_consulta\"",
+          "node": "enviar-consulta-ayudantes.flow.json"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "handler"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "1b0baf029d",
+      "name": "despedirse",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-S7zEGo"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "654f737a78",
+      "name": "handler",
+      "next": [
+        {
+          "condition": "true",
+          "node": "realizar_otra_consulta"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-D519bo"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+[
+  {
+    "id": "builtin_single-choice-0QlFBP",
+    "formData": {
+      "choices$es": [
+        {
+          "title": "Sí",
+          "value": "sí"
+        },
+        {
+          "title": "No, quiero preguntar de nuevo",
+          "value": "nueva_consulta"
+        },
+        {
+          "title": "No, quiero enviar la consulta a los ayudantes",
+          "value": "enviar_ayudantes"
+        }
+      ],
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "¿Resolví tu consulta?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T00:37:58.597Z",
+    "modifiedOn": "2020-09-28T01:07:59.300Z"
+  },
+  {
+    "id": "builtin_single-choice-mRIa_1",
+    "formData": {
+      "choices$es": [
+        {
+          "title": "Confirmar ✔️",
+          "value": "true"
+        },
+        {
+          "title": "Cancelar ❌",
+          "value": "false"
+        }
+      ],
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": " "
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T01:22:03.964Z",
+    "modifiedOn": "2020-09-28T05:04:56.739Z"
+  },
+  {
+    "id": "builtin_single-choice-GLZ4Eu",
+    "formData": {
+      "choices$es": [
+        {
+          "title": "Sí",
+          "value": "true"
+        },
+        {
+          "title": "No",
+          "value": "false"
+        },
+        {
+          "title": "Enviar a los ayudantes",
+          "value": "enviar_consulta"
+        }
+      ],
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "¿Querés realiza otra consulta?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T01:57:23.233Z",
+    "modifiedOn": "2020-09-28T04:07:22.435Z"
+  }
+]

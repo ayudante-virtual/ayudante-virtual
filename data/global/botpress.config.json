@@ -8,7 +8,7 @@
     "cors": {
       "enabled": true
     },
-    "externalUrl": "",
+    "externalUrl": "https://61a28b12662b.ngrok.io",
     "session": {
       "enabled": false,
       "maxAge": "1h"
@@ -24,7 +24,7 @@
   "dialog": {
     "janitorInterval": "10s",
     "timeoutInterval": "2m",
-    "sessionTimeoutInterval": "30m"
+    "sessionTimeoutInterval": "2m"
   },
   "logs": {
     "dbOutput": {

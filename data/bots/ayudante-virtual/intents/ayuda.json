@@ -1,0 +1,20 @@
+{
+  "name": "ayuda",
+  "utterances": {
+    "es": [
+      "ayuda",
+      "ayudame",
+      "necesito ayuda",
+      "tengo una consulta",
+      "quiero consultarte algo",
+      "no entendí",
+      "tengo una pregunta",
+      "tengo una duda",
+      "me podés ayudar?"
+    ]
+  },
+  "slots": [],
+  "contexts": [
+    "global"
+  ]
+}

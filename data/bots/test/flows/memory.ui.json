@@ -50,57 +50,12 @@
       "target": "aa3bcb1ad3",
       "points": [
         {
-          "x": 667,
-          "y": -3
+          "x": 666,
+          "y": -13
         },
         {
           "x": 220,
-          "y": 49
-        }
-      ]
-    },
-    {
-      "source": "aa3bcb1ad3",
-      "sourcePort": "out0",
-      "target": "a8dd265d97",
-      "points": [
-        {
-          "x": 327,
-          "y": 176
-        },
-        {
-          "x": 560,
-          "y": 49
-        }
-      ]
-    },
-    {
-      "source": "aa3bcb1ad3",
-      "sourcePort": "out1",
-      "target": "55e5e14c60",
-      "points": [
-        {
-          "x": 327,
-          "y": 201
-        },
-        {
-          "x": 560,
-          "y": 229
-        }
-      ]
-    },
-    {
-      "source": "4ffd049e83",
-      "sourcePort": "out0",
-      "target": "aa3bcb1ad3",
-      "points": [
-        {
-          "x": 327,
-          "y": -17
-        },
-        {
-          "x": 220,
-          "y": 49
+          "y": 48
         }
       ]
     },
@@ -110,12 +65,57 @@
       "target": "3fc7086c87",
       "points": [
         {
-          "x": 327,
-          "y": 8
+          "x": 326,
+          "y": -13
         },
         {
           "x": 560,
-          "y": -111
+          "y": -112
+        }
+      ]
+    },
+    {
+      "source": "4ffd049e83",
+      "sourcePort": "out0",
+      "target": "aa3bcb1ad3",
+      "points": [
+        {
+          "x": 326,
+          "y": -35
+        },
+        {
+          "x": 220,
+          "y": 48
+        }
+      ]
+    },
+    {
+      "source": "aa3bcb1ad3",
+      "sourcePort": "out1",
+      "target": "55e5e14c60",
+      "points": [
+        {
+          "x": 326,
+          "y": 170
+        },
+        {
+          "x": 560,
+          "y": 228
+        }
+      ]
+    },
+    {
+      "source": "aa3bcb1ad3",
+      "sourcePort": "out0",
+      "target": "a8dd265d97",
+      "points": [
+        {
+          "x": 326,
+          "y": 148
+        },
+        {
+          "x": 560,
+          "y": 48
         }
       ]
     }

@@ -1,0 +1,21 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "df052970ef",
+      "name": "entry",
+      "next": [
+        {
+          "condition": "true",
+          "node": "consultar.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-qFYUYH"
+      ],
+      "onReceive": null
+    }
+  ]
+}

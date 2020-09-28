@@ -1,0 +1,112 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "check-if-extracted",
+  "skillData": {
+    "retryAttempts": 3,
+    "contentElement": "builtin_text-gt6dnk",
+    "notFoundElement": "builtin_text-t4Ah8R",
+    "turnExpiry": -1,
+    "intent": "consultar",
+    "slotName": "consulta",
+    "entities": [
+      "any"
+    ]
+  },
+  "nodes": [
+    {
+      "name": "slot-extract",
+      "onEnter": [
+        "say #!builtin_text-gt6dnk {}"
+      ],
+      "onReceive": [
+        "basic-skills/slot_fill {\"slotName\":\"consulta\",\"entities\":\"any\", \"turnExpiry\":-1}"
+      ],
+      "next": [
+        {
+          "condition": "session.slots['consulta'] && (temp.valid === undefined || temp.valid == \"true\")",
+          "node": "extracted"
+        },
+        {
+          "condition": "true",
+          "node": "not-extracted"
+        }
+      ],
+      "id": "238230"
+    },
+    {
+      "name": "extracted",
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"extracted\",\"value\":\"true\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "123755"
+    },
+    {
+      "name": "not-extracted",
+      "onEnter": [
+        "basic-skills/slot_not_found {\"retryAttempts\":\"3\"}",
+        "say #!builtin_text-t4Ah8R {}"
+      ],
+      "onReceive": [
+        "basic-skills/slot_fill {\"slotName\":\"consulta\",\"entities\":\"any\", \"turnExpiry\":-1}"
+      ],
+      "next": [
+        {
+          "condition": "session.slots['consulta'] && (temp.valid === undefined || temp.valid == \"true\")",
+          "node": "extracted"
+        },
+        {
+          "condition": "temp.notExtracted == \"true\"",
+          "node": "#"
+        },
+        {
+          "condition": "session.slots.notFound > 0",
+          "node": "not-extracted"
+        },
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "262860"
+    },
+    {
+      "name": "check-if-extracted",
+      "onEnter": [
+        "basic-skills/slot_update_contexts {\"intentName\":\"consultar\"}"
+      ],
+      "next": [
+        {
+          "condition": "session.slots['consulta'] !== undefined",
+          "node": "already-extracted"
+        },
+        {
+          "condition": "true",
+          "node": "slot-extract"
+        }
+      ],
+      "id": "355410"
+    },
+    {
+      "name": "already-extracted",
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"alreadyExtracted\",\"value\":\"true\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "052424"
+    }
+  ]
+}

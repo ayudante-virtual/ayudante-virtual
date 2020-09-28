@@ -1,0 +1,5 @@
+{
+  "$schema": "../../assets/modules/nlu-extras/config.schema.json",
+  "primary": "'botpress-nlu'",
+  "dialogflow": null
+}

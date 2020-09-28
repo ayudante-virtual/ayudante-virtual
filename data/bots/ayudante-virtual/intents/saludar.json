@@ -1,0 +1,36 @@
+{
+  "name": "saludar",
+  "contexts": [
+    "global"
+  ],
+  "slots": [],
+  "utterances": {
+    "en": [
+      "good day!",
+      "good morning",
+      "holla",
+      "bonjour",
+      "hey there",
+      "hi bot",
+      "hey bot",
+      "hey robot",
+      "hey!",
+      "hi",
+      "hello"
+    ],
+    "es": [
+      "Saludar",
+      "Hola",
+      "Hola, ¿qué tal?",
+      "Hola, ¿cómo estás?",
+      "Hola, ¿todo bien?",
+      "Buenas",
+      "¿Cómo va?",
+      "¿Todo bien?",
+      "¿En qué andás?",
+      "Buenas tardes",
+      "Buenas noches",
+      "Buen día"
+    ]
+  }
+}

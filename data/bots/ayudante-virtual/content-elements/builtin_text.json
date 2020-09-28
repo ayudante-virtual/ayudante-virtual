@@ -1,0 +1,156 @@
+[
+  {
+    "id": "builtin_text-qFYUYH",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Hola <@{{event.payload.payload.user}}>! Mi tarea es ayudarte a *resolver dudas*, si no encuentro nada que te sirva puedo mandar tu consulta a los ayudantes (a los de carne y hueso :meat_on_bone:)."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-27T20:21:07.457Z",
+    "modifiedOn": "2020-09-28T02:48:25.990Z"
+  },
+  {
+    "id": "builtin_text-qAsF9R",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "¿Cuál es tu consulta?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-27T20:21:47.083Z",
+    "modifiedOn": "2020-09-27T20:21:47.083Z"
+  },
+  {
+    "id": "builtin_text-msga49",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Lo siento, no entendí lo que quisite consultar :sob:, ¿podrías reformular la consulta?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-27T20:26:05.823Z",
+    "modifiedOn": "2020-09-27T20:26:05.823Z"
+  },
+  {
+    "id": "builtin_text-g9iSlK",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Encontré las siguientes respuestas que te pueden ayudar:\n{{{temp.respuestas}}}"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-27T20:32:47.878Z",
+    "modifiedOn": "2020-09-28T02:38:59.902Z"
+  },
+  {
+    "id": "builtin_text-D519bo",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Por favor elegí una de las opciones"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T00:40:17.250Z",
+    "modifiedOn": "2020-09-28T00:40:17.250Z"
+  },
+  {
+    "id": "builtin_text-S7zEGo",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Voy a estar por acá cuando tengas otra consulta, saludos! 👋"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T00:46:30.526Z",
+    "modifiedOn": "2020-09-28T03:59:51.312Z"
+  },
+  {
+    "id": "builtin_text-X6yWEX",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Bien, acordate que solo deberías enviar consultas *privadas* que no puedas compartir con otros compañeros. Para las preguntas públicas podés usar el <https://campus.fi.uba.ar/mod/forum/view.php?id=21791|campus>."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T01:02:32.023Z",
+    "modifiedOn": "2020-09-28T02:50:58.271Z"
+  },
+  {
+    "id": "builtin_text-HMx76K",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "¿Querés enviar la siguiente consulta a los *ayudantes*? (Para editar simplemente escribila devuelta):"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T01:18:02.116Z",
+    "modifiedOn": "2020-09-28T07:44:37.386Z"
+  },
+  {
+    "id": "builtin_text-a2M62m",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Tu consulta fue enviada a los ayudantes, ellos tratarán de responderla lo antes posible pero en caso de que no sea así podés realizar la consulta durante el horario de clases."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T01:20:38.734Z",
+    "modifiedOn": "2020-09-28T01:24:50.195Z"
+  },
+  {
+    "id": "builtin_text--DNJlI",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Saludos!"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T01:25:10.880Z",
+    "modifiedOn": "2020-09-28T01:25:10.880Z"
+  },
+  {
+    "id": "builtin_text-aBnApp",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Lo siento, no encontré ninguna respuesta para tu consulta 😅."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T01:54:41.820Z",
+    "modifiedOn": "2020-09-28T03:16:24.673Z"
+  },
+  {
+    "id": "builtin_text-UF5gqn",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Lo siento, hago lo mejor que puedo! :sob:"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T01:58:56.237Z",
+    "modifiedOn": "2020-09-28T01:58:56.237Z"
+  },
+  {
+    "id": "builtin_text-idOlxF",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "😯 Oops! Tenemos un problema. Por favor intentá algo distinto mientras tratamos de solucionarlo 🔨"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T02:46:08.935Z",
+    "modifiedOn": "2020-09-28T02:46:47.404Z"
+  },
+  {
+    "id": "builtin_text-8SYQmD",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "_{{temp.consulta}}_"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-09-28T04:32:54.019Z",
+    "modifiedOn": "2020-09-28T08:20:28.088Z"
+  }
+]

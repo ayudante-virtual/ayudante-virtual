@@ -1,0 +1,24 @@
+{
+  "id": "uy31kg0s5o_what_s_the_most_common_monkey",
+  "data": {
+    "action": "text",
+    "contexts": [
+      "monkeys"
+    ],
+    "enabled": true,
+    "answers": {
+      "en": [
+        "Chimpance"
+      ]
+    },
+    "questions": {
+      "en": [
+        "What's the most common monkey?",
+        "More aboundant monkey",
+        "Most common monkey"
+      ]
+    },
+    "redirectFlow": "",
+    "redirectNode": ""
+  }
+}

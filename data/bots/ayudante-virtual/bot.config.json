@@ -1,0 +1,53 @@
+{
+  "locked": false,
+  "disabled": false,
+  "private": false,
+  "details": {
+    "website": "",
+    "phoneNumber": "",
+    "emailAddress": "",
+    "termsConditions": "",
+    "privacyPolicy": "",
+    "avatarUrl": "/api/v1/bots/ayudante-virtual/media/pfmf37zh1vpuz5iikuq9-logo.png",
+    "coverPictureUrl": ""
+  },
+  "$schema": "../../bot.config.schema.json",
+  "description": "Bot para responder y realizar consultas",
+  "active": true,
+  "version": "12.10.6",
+  "author": "Botpress, Inc.",
+  "license": "AGPL-3.0",
+  "imports": {
+    "modules": [],
+    "incomingMiddleware": [],
+    "outgoingMiddleware": [],
+    "contentTypes": [
+      "builtin_action-button",
+      "builtin_card",
+      "builtin_carousel",
+      "builtin_image",
+      "builtin_single-choice",
+      "builtin_text",
+      "dropdown"
+    ]
+  },
+  "dialog": {
+    "timeoutInterval": "5m"
+  },
+  "logs": {
+    "expiration": "1 week"
+  },
+  "defaultLanguage": "es",
+  "languages": [
+    "es"
+  ],
+  "id": "ayudante-virtual",
+  "name": "Ayudante Virtual",
+  "pipeline_status": {
+    "current_stage": {
+      "id": "prod",
+      "promoted_on": "2020-08-29T04:05:27.977Z",
+      "promoted_by": "admin"
+    }
+  }
+}

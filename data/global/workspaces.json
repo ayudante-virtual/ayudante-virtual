@@ -4,6 +4,7 @@
     "name": "Default",
     "audience": "external",
     "bots": [
+      "ayudante-virtual",
       "test"
     ],
     "roles": [
