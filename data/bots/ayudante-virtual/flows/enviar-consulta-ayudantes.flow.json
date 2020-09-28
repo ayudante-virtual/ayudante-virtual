@@ -25,7 +25,7 @@
       "next": [
         {
           "condition": "true",
-          "node": "confirmar_consulta"
+          "node": "pre_confirmar_consulta"
         }
       ],
       "onEnter": [
@@ -50,7 +50,7 @@
         {
           "caption": "User picked [false]",
           "condition": "temp['skill-choice-ret-5nber4j58d'] == \"false\"",
-          "node": "##"
+          "node": "##pre_realizar_otra_consulta"
         },
         {
           "caption": "On failure",
@@ -71,7 +71,7 @@
         }
       ],
       "onEnter": [
-        "builtin/setVariable {\"type\":\"temp\",\"name\":\"consulta\",\"value\":\"{{event.preview}}\"}"
+        "ayudante-virtual/ensamblarConsulta {}"
       ],
       "onReceive": null,
       "type": "standard"
@@ -89,6 +89,21 @@
         "ayudante-virtual/enviarMensaje {\"canal\":\"CV8R3GK5G\",\"mensaje\":\"<@{{event.payload.body.user.id}}> tiene una consulta: {{{temp.consulta}}}\"}",
         "say #!builtin_text-a2M62m",
         "say #!builtin_text--DNJlI"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "5f803f6363",
+      "name": "pre_confirmar_consulta",
+      "next": [
+        {
+          "condition": "true",
+          "node": "confirmar_consulta"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"skill-choice-ret-5nber4j58d\",\"value\":\"null\"}"
       ],
       "onReceive": null,
       "type": "standard"

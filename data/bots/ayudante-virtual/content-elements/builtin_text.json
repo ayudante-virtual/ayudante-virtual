@@ -136,21 +136,21 @@
     "formData": {
       "markdown$es": true,
       "typing$es": true,
-      "text$es": "😯 Oops! Tenemos un problema. Por favor intentá algo distinto mientras tratamos de solucionarlo 🔨"
+      "text$es": "😯 Oops! Tenemos un problema. Por favor intentá algo distinto mientras un humano trata de solucionarlo 🔨"
     },
     "createdBy": "admin",
     "createdOn": "2020-09-28T02:46:08.935Z",
-    "modifiedOn": "2020-09-28T02:46:47.404Z"
+    "modifiedOn": "2020-09-28T14:12:07.725Z"
   },
   {
     "id": "builtin_text-8SYQmD",
     "formData": {
       "markdown$es": true,
       "typing$es": true,
-      "text$es": "_{{temp.consulta}}_"
+      "text$es": "{{{temp.consulta}}}"
     },
     "createdBy": "admin",
     "createdOn": "2020-09-28T04:32:54.019Z",
-    "modifiedOn": "2020-09-28T08:20:28.088Z"
+    "modifiedOn": "2020-09-28T08:42:00.602Z"
   }
 ]
