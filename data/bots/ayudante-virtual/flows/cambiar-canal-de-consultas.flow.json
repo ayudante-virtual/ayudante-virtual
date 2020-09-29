@@ -51,8 +51,8 @@
       "name": "cambiar_canal_de_consultas",
       "next": [
         {
-          "condition": "temp.canal_no_encontrado == true",
-          "node": "canal_no_encontrado"
+          "condition": "temp.error_canal == true",
+          "node": "error_canal"
         },
         {
           "condition": "true",
@@ -84,7 +84,7 @@
     },
     {
       "id": "8d84b263de",
-      "name": "canal_no_encontrado",
+      "name": "error_canal",
       "next": [
         {
           "condition": "true",

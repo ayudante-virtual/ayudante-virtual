@@ -8,7 +8,7 @@ const cambiarCanalDeConsultas = async () => {
     const canal = event.nlu.slots.canal_de_consulta.value.substring(1)
     const mensaje = 'Gracias por configurar el ayudante virtual! Las consultas se recibirán aquí.'
 
-    event.state.temp.canal_no_encontrado = false
+    event.state.temp.error_canal = false
     try {
         await event.payload.context.client.chat.postMessage({
             text: mensaje,
@@ -16,8 +16,10 @@ const cambiarCanalDeConsultas = async () => {
             channel: canal
         })
     } catch (e) {
-        if(e.message.includes('channel_not_found'))
-            event.state.temp.canal_no_encontrado = true
+        if(e.message.includes('channel_not_found')) // No existe el canal o es privado
+            event.state.temp.error_canal = true
+        else if(e.message.includes('not_in_channel')) // El canal es público, pero el bot no tiene acceso
+            event.state.temp.error_canal = true
         else
             throw e
     }

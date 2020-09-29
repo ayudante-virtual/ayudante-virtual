@@ -21,7 +21,8 @@ services:
       - postgres
     volumes:
       - ./config/channel-slack-av.json:/botpress/data/bots/ayudante-virtual/config/channel-slack-av.json
-      - ./config/botpress-workspaces.json:/botpress/data/global/workspaces.json
+      - ./config/workspaces.json:/botpress/data/global/workspaces.json
+      - ./config/botpress.config.json:/botpress/data/global/botpress.config.json
 
   nginx:
     build: 'nginx'
@@ -30,6 +31,7 @@ services:
       - "443:443"
     volumes:
       - ./nginx/letsencrypt:/etc/letsencrypt
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - botpress
 
