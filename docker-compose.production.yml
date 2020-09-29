@@ -22,7 +22,7 @@ services:
       - buscador
       - postgres
     volumes:
-      - botpress-data:/botpress/data
+      - botpress-data:/botpress/data/bots/ayudante-virtual/config
 
 volumes:
   botpress-data:

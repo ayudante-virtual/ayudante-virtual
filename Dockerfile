@@ -11,6 +11,6 @@ RUN apt update && \
 
 ENV BP_MODULE_NLU_DUCKLINGURL='https://duckling.botpress.io'
 ENV BP_MODULE_NLU_LANGUAGESOURCES='[{"endpoint":"https://lang-01.botpress.io"}]'
-ADD data data
+COPY data data
 
 CMD ["./bp"]

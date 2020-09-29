@@ -22,7 +22,7 @@ const cambiarCanalDeConsultas = async () => {
             throw e
     }
 
-    const original = await bp.kvs.forBot(event.botId).get('global')
+    const original = await bp.kvs.forBot(event.botId).get('global') || {}
     const nuevo = {
         ...original[event.payload.payload.team] || {},
         canal_de_consultas: canal
