@@ -1,5 +1,7 @@
 # Ayudante virtual
 
+Bot de Slack que sirve como ayudante virtual para realizar consultas que no pueden ser compartidas en canales públicos.
+
 ### Prerequisitos
  - [Docker](https://www.docker.com/)
 
