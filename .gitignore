@@ -2,3 +2,5 @@ uploads
 .idea
 data/bots/*/config/channel-slack-av.json
 .env.buscador
+.env.botpress
+.env.postgres

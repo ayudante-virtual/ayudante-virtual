@@ -1,0 +1,29 @@
+version: '3.7'
+services:
+  buscador:
+    image: ayudantevirtual/integracion-moodle:latest
+    env_file:
+      - .env.buscador
+
+  postgres:
+    image: postgres:12.4-alpine
+    env_file:
+      - .env.postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  botpress:
+    image: ayudantevirtual/ayudante-virtual:latest
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.botpress
+    depends_on:
+      - buscador
+      - postgres
+    volumes:
+      - botpress-data:/botpress/data
+
+volumes:
+  botpress-data:
+  postgres-data:

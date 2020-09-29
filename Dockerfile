@@ -6,7 +6,7 @@ RUN apt update && \
 	wget \
  && rm -rf /var/lib/apt/lists/* && \
     wget -c -q -O modules/channel-slack-av.tgz \
-    https://github.com/ayudante-virtual/channel-slack/releases/download/v1.0.1/channel-slack-av.tgz && \
+    https://github.com/ayudante-virtual/channel-slack/releases/download/v1.0.2/channel-slack-av.tgz && \
     ./bp extract
 
 ENV BP_MODULE_NLU_DUCKLINGURL='https://duckling.botpress.io'
