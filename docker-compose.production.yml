@@ -20,7 +20,8 @@ services:
       - buscador
       - postgres
     volumes:
-      - botpress-data:/botpress/data/bots/ayudante-virtual/config
+      - ./config/channel-slack-av.json:/botpress/data/bots/ayudante-virtual/config/channel-slack-av.json
+      - ./config/botpress-workspaces.json:/botpress/data/global/workspaces.json
 
   nginx:
     build: 'nginx'
@@ -33,5 +34,4 @@ services:
       - botpress
 
 volumes:
-  botpress-data:
   postgres-data:
