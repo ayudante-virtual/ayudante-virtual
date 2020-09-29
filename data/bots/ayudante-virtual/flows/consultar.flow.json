@@ -26,11 +26,11 @@
       "name": "saludar",
       "next": [
         {
-          "condition": "event.nlu.intent.name === 'saludar'",
+          "condition": "(event.nlu.intent.name === 'saludar') && (event.nlu.ambiguous !== true)",
           "node": "transicion"
         },
         {
-          "condition": "event.nlu.intent.name === 'ayuda'",
+          "condition": "(event.nlu.intent.name === 'ayuda') && (event.nlu.ambiguous !== true)",
           "node": "transicion"
         },
         {

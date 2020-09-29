@@ -14,8 +14,6 @@ services:
 
   botpress:
     image: ayudantevirtual/ayudante-virtual:latest
-    ports:
-      - "3000:3000"
     env_file:
       - .env.botpress
     depends_on:
@@ -23,6 +21,16 @@ services:
       - postgres
     volumes:
       - botpress-data:/botpress/data/bots/ayudante-virtual/config
+
+  nginx:
+    build: 'nginx'
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/letsencrypt:/etc/letsencrypt
+    depends_on:
+      - botpress
 
 volumes:
   botpress-data:

@@ -1,30 +1,5 @@
 [
   {
-    "id": "builtin_single-choice-0QlFBP",
-    "formData": {
-      "choices$es": [
-        {
-          "title": "Sí",
-          "value": "sí"
-        },
-        {
-          "title": "No, quiero preguntar de nuevo",
-          "value": "nueva_consulta"
-        },
-        {
-          "title": "No, quiero enviar la consulta a los ayudantes",
-          "value": "enviar_ayudantes"
-        }
-      ],
-      "markdown$es": true,
-      "typing$es": true,
-      "text$es": "¿Resolví tu consulta?"
-    },
-    "createdBy": "admin",
-    "createdOn": "2020-09-28T00:37:58.597Z",
-    "modifiedOn": "2020-09-28T01:07:59.300Z"
-  },
-  {
     "id": "builtin_single-choice-mRIa_1",
     "formData": {
       "choices$es": [

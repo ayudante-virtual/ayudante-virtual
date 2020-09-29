@@ -22,17 +22,6 @@
     "modifiedOn": "2020-09-27T20:21:47.083Z"
   },
   {
-    "id": "builtin_text-msga49",
-    "formData": {
-      "markdown$es": true,
-      "typing$es": true,
-      "text$es": "Lo siento, no entendí lo que quisite consultar :sob:, ¿podrías reformular la consulta?"
-    },
-    "createdBy": "admin",
-    "createdOn": "2020-09-27T20:26:05.823Z",
-    "modifiedOn": "2020-09-27T20:26:05.823Z"
-  },
-  {
     "id": "builtin_text-g9iSlK",
     "formData": {
       "markdown$es": true,
@@ -119,17 +108,6 @@
     "createdBy": "admin",
     "createdOn": "2020-09-28T01:54:41.820Z",
     "modifiedOn": "2020-09-28T03:16:24.673Z"
-  },
-  {
-    "id": "builtin_text-UF5gqn",
-    "formData": {
-      "markdown$es": true,
-      "typing$es": true,
-      "text$es": "Lo siento, hago lo mejor que puedo! :sob:"
-    },
-    "createdBy": "admin",
-    "createdOn": "2020-09-28T01:58:56.237Z",
-    "modifiedOn": "2020-09-28T01:58:56.237Z"
   },
   {
     "id": "builtin_text-idOlxF",
