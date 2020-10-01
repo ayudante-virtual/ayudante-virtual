@@ -1,5 +1,5 @@
 {
-  "$schema": "../../assets/modules/channel-slack-av/config.schema.json",
+  "$schema": "../../assets/modules/channel-slack/config.schema.json",
   "enabled": false,
   "botId": "your_bot_id",
   "signingSecret": "signin_secret",
