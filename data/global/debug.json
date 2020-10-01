@@ -1,1 +1,1 @@
-{"scopes":["bp:dialog","bp:channel-slack-av:incoming","bp:channel-slack-av:outgoing"]}
+{"scopes":["bp:dialog","bp:channel-slack:incoming","bp:channel-slack:outgoing"]}
