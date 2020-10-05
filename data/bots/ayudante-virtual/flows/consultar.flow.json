@@ -59,7 +59,7 @@
       ],
       "onEnter": [
         "builtin/setVariable {\"type\":\"temp\",\"name\":\"consulta\",\"value\":\"{{event.preview}}\"}",
-        "ayudante-virtual/setVariable {\"tipo\":\"temp\",\"nombre\":\"busqueda\",\"expresion\":\"'{{event.nlu.slots.consulta.value}}' ||  '{{event.preview}}'\"}",
+        "ayudante-virtual/setVariable {\"tipo\":\"temp\",\"nombre\":\"busqueda\",\"expresion\":\"`{{event.nlu.slots.consulta.value}}` ||  `{{event.preview}}`\"}",
         "ayudante-virtual/obtenerRespuestas {\"busqueda\":\"{{temp.busqueda}}\"}"
       ],
       "onReceive": null,

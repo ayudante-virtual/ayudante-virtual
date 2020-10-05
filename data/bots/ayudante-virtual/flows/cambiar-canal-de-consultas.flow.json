@@ -107,7 +107,7 @@
         }
       ],
       "onEnter": [
-        "ayudante-virtual/setVariable {\"tipo\":\"session\",\"nombre\":\"slots\",\"expresion\":\"null\"}"
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"slots\",\"value\":\"null\"}"
       ],
       "onReceive": null,
       "type": "standard"
